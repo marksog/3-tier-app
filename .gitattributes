@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+.terraform/
+# Auto detect binary files
+*.tfstate binary
+*.tfstate.backup binary
+*.tfvars binary
+*.tfvars.json binary
+*.tfplan binary
