@@ -20,6 +20,8 @@ module "bastion_host" {
     vpc_id = module.network.vpc_id
     public_subnet_ids = module.network.public_subnet_ids
     key_name = var.key_name
+
+    depends_on = [ module.network ]
 }
 
 module "jenkins" {
@@ -29,6 +31,8 @@ module "jenkins" {
     vpc_id = module.network.vpc_id
     public_subnet_ids = module.network.public_subnet_ids
     key_name = var.key_name
+
+    depends_on = [ module.network ]
 }
 
 module "eks" {
@@ -43,6 +47,8 @@ module "eks" {
     project_name = var.project_name
     instance_type = var.instance_type
     key_name = var.key_name
+
+    depends_on = [ module.network ]
   
 }
 
