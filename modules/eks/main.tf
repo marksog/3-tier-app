@@ -24,7 +24,7 @@ module "eks" {
     version         = "~> 20.0"
 
     cluster_name = var.cluster_name
-    cluster_version = "1.27"
+    cluster_version = "1.28"
     cluster_endpoint_public_access = false
     cluster_endpoint_private_access = true
 
@@ -84,6 +84,7 @@ module "eks" {
             desired_size = 2
             instance_type = var.instance_type
             capacity_type = "SPOT"
+            ami_type = "AL2_x86_64"
 
             disk_size = 20
             use_custom_launch_template = false
