@@ -56,18 +56,18 @@ pipeline {
         }
 
 
-        stage('Update Kubernetes Manifest') {
-            steps {
-                script {
-                    update_k8s_manifest(
-                        imageTag: env.DOCKER_IMAGE_TAG,
-                        manifestsPath: 'k8s/app',
-                        gitCredentialsId: 'github_credentials',
-                        gitUserName: 'Jenkins',
-                        gitUserEmail: 'meyofmarksog@gmail.com'
-                    )
-                }
-            }
-        }
+        // stage('Update Kubernetes Manifest') {
+        //     steps {
+        //         script {
+        //             update_k8s_manifest(
+        //                 imageTag: env.DOCKER_IMAGE_TAG,
+        //                 manifestsPath: 'k8s/app',
+        //                 gitCredentialsId: 'github_credentials',
+        //                 gitUserName: 'Jenkins',
+        //                 gitUserEmail: 'meyofmarksog@gmail.com'
+        //             )
+        //         }
+        //     }
+        // }
     }
 }
