@@ -27,7 +27,7 @@ variable "project_name" {
 variable "instance_type" {
   description = "The type of EC2 instance for the bastion host"
   type        = string
-  default     = "t3.medium"
+  default     = "t3.small"
   
 }
 
@@ -45,14 +45,14 @@ variable "private_subnet_ids" {
 variable "key_name" {
   description = "The name of the key pair to use for the bastion host"
   type        = string
-  default     = "jenkins_server" 
 }
 
 variable "admin_users" {
   description = "List of IAM users with admin access"
   type        = list(string)
   default     = [
-    "arn:aws:iam::148761635167:user/InfraAdmin",
-    "arn:aws:iam::148761635167:user/webadmin"
+    "arn:aws:iam::923214554566:user/DevAdmin",
+    "arn:aws:iam::923214554566:user/devuser",
+    "arn:aws:iam::923214554566:root"
   ]
 }

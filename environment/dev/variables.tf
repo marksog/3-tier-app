@@ -61,6 +61,6 @@ variable "project_name" {
 variable "instance_type" {
   description = "The type of EC2 instance for the bastion host"
   type        = string
-  default     = "t3.large"
+  default     = "t2.mico"
   
 }
