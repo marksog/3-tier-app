@@ -21,9 +21,9 @@ resource "aws_security_group" "allow_users_connection" {
 
     egress {
             description = "Allow SSH access from users"
-            from_port   = 22
-            to_port     = 22
-            protocol    = "tcp"
+            from_port   = 0
+            to_port     = 0
+            protocol    = "-1" # Allow all protocols
             cidr_blocks = ["0.0.0.0/0"]
         }
     tags = merge(

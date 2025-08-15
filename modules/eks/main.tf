@@ -79,11 +79,11 @@ module "eks" {
 
     eks_managed_node_groups = {
         app_cluster_ng = {
-            max_size = 3
+            max_size = 2
             min_size = 1
-            desired_size = 2
+            desired_size = 1
             instance_type = var.instance_type
-            capacity_type = "SPOT"
+            capacity_type = "ON_DEMAND"
             ami_type = "AL2_x86_64"
 
             disk_size = 20

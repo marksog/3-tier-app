@@ -20,7 +20,6 @@ variable "instance_type" {
 variable "key_name" {
   description = "The name of the key pair to use for the bastion host"
   type        = string
-  default = ""
 }
 
 variable "public_subnet_ids" {
